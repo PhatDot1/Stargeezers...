@@ -136,9 +136,7 @@ def main():
     records = get_airtable_records(airtable_api_key, base_id, source_table_name)
     print(f"Fetched {len(records)} records from Airtable.")
 
-    # Filter records where the last letter of the record ID is between A and M
-    filtered_records = [record for record in records if 'A' <= record['id'][-1] <= 'M']
-    print(f"Filtered to {len(filtered_records)} records based on ID condition.")
+
 
     for record in filtered_records:
         fields = record.get('fields', {})
