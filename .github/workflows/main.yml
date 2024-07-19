@@ -28,10 +28,42 @@ jobs:
           env
           python -V
 
-      - name: Run script
+      - name: Run cloud.py
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           MY_GITHUB_API_KEYS: ${{ secrets.MY_GITHUB_API_KEYS }}
         run: |
           echo $MY_GITHUB_API_KEYS > github_api_keys.txt
           python cloud.py
+
+      - name: Run cloud00.py
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          MY_GITHUB_API_KEYS: ${{ secrets.MY_GITHUB_API_KEYS }}
+        run: |
+          echo $MY_GITHUB_API_KEYS > github_api_keys.txt
+          python cloud00.py
+
+      - name: Run cloud01.py
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          MY_GITHUB_API_KEYS: ${{ secrets.MY_GITHUB_API_KEYS }}
+        run: |
+          echo $MY_GITHUB_API_KEYS > github_api_keys.txt
+          python cloud01.py
+
+      - name: Run cloud03.py
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          MY_GITHUB_API_KEYS: ${{ secrets.MY_GITHUB_API_KEYS }}
+        run: |
+          echo $MY_GITHUB_API_KEYS > github_api_keys.txt
+          python cloud03.py
+
+      - name: Run cloud04.py
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          MY_GITHUB_API_KEYS: ${{ secrets.MY_GITHUB_API_KEYS }}
+        run: |
+          echo $MY_GITHUB_API_KEYS > github_api_keys.txt
+          python cloud04.py
